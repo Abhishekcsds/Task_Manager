@@ -1,0 +1,62 @@
+.search-bar { margin-bottom: 20px; }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid var(--gray-100);
+  transition: box-shadow 0.15s;
+}
+.project-card:hover { box-shadow: var(--shadow-md); }
+
+.project-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-status-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.project-status { font-size: 12px; color: var(--gray-500); font-weight: 500; }
+
+.project-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.project-card:hover .project-actions { opacity: 1; }
+
+.project-card-link { text-decoration: none; color: inherit; }
+.project-name { font-size: 16px; font-weight: 600; color: var(--gray-800); margin-bottom: 4px; }
+.project-name:hover { color: var(--primary); }
+.project-desc { font-size: 13px; color: var(--gray-500); line-height: 1.5; }
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--gray-500);
+}
+
+.project-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--gray-500);
+}
+.project-progress .progress-bar { flex: 1; }
+
+.project-deadline { font-size: 12px; color: var(--gray-500); }
